@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 # load data
 data = pandas.read_csv('spam.csv', encoding='latin-1')
-train_data = data[:4457] # 4457 items 80%
-test_data = data[4457:] # 1115 items 20%
+train_data = data # 4457 items 80%
+test_data = data # 1115 items 20%
 
 # train model
 Classifier = RandomForestClassifier(n_estimators=100, n_jobs=1)
